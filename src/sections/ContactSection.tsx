@@ -4,6 +4,8 @@ import TitleHeader from "../components/TitleHeader";
 // import ContactExperience from "@/components/models/contact_models/ContactExperience";
 import { toast } from "react-toastify";
 import Spline from "@splinetool/react-spline";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 export interface ContactForm {
   name: string;
@@ -12,6 +14,23 @@ export interface ContactForm {
 }
 
 const ContactSection = () => {
+  useGSAP(() => {
+    gsap.fromTo(
+      ".contact-model",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".contact-form",
+          start: "top center",
+        },
+      }
+    );
+  });
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [form, setForm] = useState<ContactForm>({
@@ -63,7 +82,7 @@ const ContactSection = () => {
           </h2>
         </div>
         <div className="grid-12-cols mt-16">
-          <div className="xl:col-span-5">
+          <div className="contact-form xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
               <form
                 ref={formRef}
@@ -123,7 +142,7 @@ const ContactSection = () => {
               </form>
             </div>
           </div>
-          <div className="xl:col-span-7 min-h-96">
+          <div className="contact-model xl:col-span-7 min-h-96">
             <div className="relative w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
               <Spline scene="https://prod.spline.design/czq8hV-3WdWsgjF9/scene.splinecode" />
 

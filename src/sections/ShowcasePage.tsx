@@ -13,7 +13,7 @@ const ShowcasePage = () => {
 
   useGSAP(() => {
     gsap.fromTo(
-      ".app-showcase",
+      ".showcase",
       {
         opacity: 0,
       },
@@ -23,7 +23,7 @@ const ShowcasePage = () => {
         ease: "power2.inOut",
         scrollTrigger: {
           // The card is the trigger element
-          trigger: ".app-showcase",
+          trigger: ".showcase",
           // Trigger the animation when the card is 80% down the screen
           start: "top 80%",
         },
@@ -37,22 +37,26 @@ const ShowcasePage = () => {
           My Recent <span className="text-orange-700">Projects</span>
         </h2>
 
-        <div>
+        <div className="showcase">
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={50} // Increased for better spacing
+            spaceBetween={50}
             slidesPerView={1}
+            slidesPerGroup={1} // Match with slidesPerView
             navigation
             pagination={{ clickable: true }}
             breakpoints={{
               640: {
                 slidesPerView: 1,
+                slidesPerGroup: 1,
               },
               768: {
                 slidesPerView: 2,
+                slidesPerGroup: 2,
               },
               1024: {
                 slidesPerView: 3,
+                slidesPerGroup: 2,
               },
             }}
             className="project-swiper"
