@@ -44,6 +44,7 @@ export interface TechStackIcon {
 }
 
 export interface ExpCard {
+  id: number;
   review: string;
   imgPath: string;
   logoPath: string;
@@ -330,6 +331,7 @@ const techStackIcons: TechStackIcon[] = [
 
 const expCards: ExpCard[] = [
   {
+    id: 1,
     review:
       "Moamen demonstrated exceptional backend and API design skills. His attention to detail and secure authentication system helped us deliver a product that felt both professional and reliable",
     imgPath: "/images/exp1.png",
@@ -343,6 +345,7 @@ const expCards: ExpCard[] = [
     ],
   },
   {
+    id: 2,
     review:
       "Moamen brought a sharp eye for modern UI and seamless interactivity. His work on real-time functionality made the clone feel dynamic and engaging. He balanced performance and design like a true full-stack engineer",
     imgPath: "/images/exp2.png",
@@ -356,6 +359,7 @@ const expCards: ExpCard[] = [
     ],
   },
   {
+    id: 3,
     review:
       "Moamen’s creativity and technical depth were key to replicating the feel of a world-class streaming platform. From smooth frontend transitions to user-role management, he delivered high-quality code and UX",
     imgPath: "/images/exp3.png",

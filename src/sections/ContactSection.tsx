@@ -1,8 +1,9 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "@/components/models/contact_models/ContactExperience";
+// import ContactExperience from "@/components/models/contact_models/ContactExperience";
 import { toast } from "react-toastify";
+import Spline from "@splinetool/react-spline";
 
 export interface ContactForm {
   name: string;
@@ -123,8 +124,11 @@ const ContactSection = () => {
             </div>
           </div>
           <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+            <div className="relative w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
+              <Spline scene="https://prod.spline.design/czq8hV-3WdWsgjF9/scene.splinecode" />
+
+              {/* Logo Hider */}
+              <span className="absolute bottom-5 right-4 w-[9.1rem] h-[2.3rem] rounded-full bg-black"></span>
             </div>
           </div>
         </div>
