@@ -1,6 +1,6 @@
 # 3D Portfolio 
 
-![Demo Screenshot](https://ibb.co/JRLpGN6n)
+![Demo Screenshot](/src/assets/readme-cover.png)
 <!-- Or use a GIF or deployment link screenshot for interactivity -->
 
 [![Tech Stack](https://img.shields.io/badge/Stack-MERN-blueviolet)]()
@@ -78,3 +78,6 @@ cd ../server && npm install
 
 # Run the project
 npm run dev
+```
+
+# ©️ Credits 
