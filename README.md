@@ -91,9 +91,9 @@ The Design of this Project was inspired by Adrian Hajdin from JSM (Javascript We
 
 The addition I've made include but are not restricted to:  
 
--Hero Sections effects using Aceternity UI 
--Work Section that features all of my Projects 
--Sentry Implementations and Integration for Bug Reporting and Error notifications 
--Contact Me Section 3D model and UI changes 
+- Hero Sections effects using Aceternity UI 
+- Work Section that features all of my Projects 
+- Sentry Implementations and Integration for Bug Reporting and Error notifications 
+- Contact Me Section 3D model and UI changes 
 -Typescript instead of Javascript 
 
