@@ -47,7 +47,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ item }) => {
             <img
               src={item.img}
               alt="cover"
-              className="z-10 absolute bottom-0 transform rotate-[2deg]"
+              className="z-10 absolute bottom-0 transform object-fit h-full w-full"
             />
           </div>
 

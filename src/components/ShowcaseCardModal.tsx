@@ -78,24 +78,29 @@ const ShowcaseCardModal: FC<ModalProps> = ({ isOpen, setIsOpen, item }) => {
 
             {/* Action Buttons */}
             <div className="space-y-3 mt-auto">
-              <a
-                href={item.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-white text-black py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-950 hover:border hover:border-white hover:text-white duration-200 transition-colors"
-              >
-                <FaGithub />
-                View on GitHub
-              </a>
-              <a
-                href={item.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-white text-black py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-950 hover:border hover:border-white hover:text-white duration-200 transition-colors  "
-              >
-                <FaExternalLinkAlt />
-                Live Demo
-              </a>
+              {item.githubLink && (
+                <a
+                  href={item.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-white text-black py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-950 hover:border hover:border-white hover:text-white duration-200 transition-colors"
+                >
+                  <FaGithub />
+                  View on GitHub
+                </a>
+              )}
+
+              {item.demoLink && (
+                <a
+                  href={item.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-white text-black py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-gray-950 hover:border hover:border-white hover:text-white duration-200 transition-colors  "
+                >
+                  <FaExternalLinkAlt />
+                  Live Demo
+                </a>
+              )}
             </div>
           </div>
 
