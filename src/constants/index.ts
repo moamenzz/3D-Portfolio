@@ -58,8 +58,10 @@ export interface Project {
   title: string;
   des: string;
   img: string;
+  githubLink?: string;
+  demoLink?: string;
+  status: "Completed" | "In Progress" | "Coming soon";
   iconLists: string[];
-  link: string;
 }
 
 interface ExpLogo {
@@ -94,7 +96,9 @@ export const projects: Project[] = [
       "/images/logos/mongo.svg",
       "/images/logos/tail.svg",
     ],
-    link: "/ui.earth.com",
+    status: "In Progress",
+    githubLink: "https://github.com/moamenzz/Coursemedia",
+    demoLink: "https://coursemedia.vercel.app",
   },
   {
     id: 2,
@@ -108,13 +112,14 @@ export const projects: Project[] = [
       "/images/logos/mongo.svg",
       "/images/logos/tail.svg",
     ],
-    link: "/ui.apple.com",
+    status: "In Progress",
+    demoLink: "https://spotify-clone319.vercel.app",
   },
   {
     id: 3,
-    title: "Todoist – Task Management App",
-    des: "Todoist is a productivity-focused to-do list application that helps users manage tasks efficiently. Users can create, update, and categorize tasks with due dates, priorities, and completion statuses.",
-    img: "/images/Todoist-cover.PNG",
+    title: "Taskify – Task Management App",
+    des: "Taskify is a productivity-focused to-do list application that helps users manage tasks efficiently. Users can create, update, and categorize tasks with due dates, priorities, and completion statuses.",
+    img: "/images/Taskify-cover.png",
     iconLists: [
       "/images/logos/ts.svg",
       "/images/logos/re.svg",
@@ -122,7 +127,9 @@ export const projects: Project[] = [
       "/images/logos/mongo.svg",
       "/images/logos/tail.svg",
     ],
-    link: "/ui.apple.com",
+    status: "Completed",
+    githubLink: "https://github.com/moamenzz/Task-manager",
+    demoLink: "https://taskify319.vercel.app",
   },
   {
     id: 4,
@@ -136,7 +143,9 @@ export const projects: Project[] = [
       "/images/logos/mongo.svg",
       "/images/logos/tail.svg",
     ],
-    link: "/ui.yoom.com",
+    status: "In Progress",
+    githubLink: "https://github.com/moamenzz/X-Clone",
+    demoLink: "https://x-clone319.vercel.app",
   },
   {
     id: 5,
@@ -150,7 +159,9 @@ export const projects: Project[] = [
       "/images/logos/mongo.svg",
       "/images/logos/tail.svg",
     ],
-    link: "/ui.aiimg.com",
+    status: "Completed",
+    githubLink: "https://github.com/moamenzz/Blogify",
+    demoLink: "https://blogify319.vercel.app",
   },
   {
     id: 6,
@@ -164,7 +175,9 @@ export const projects: Project[] = [
       "/images/logos/mongo.svg",
       "/images/logos/tail.svg",
     ],
-    link: "/ui.aiimg.com",
+    status: "Completed",
+    githubLink: "https://github.com/moamenzz/Chatty",
+    demoLink: "https://chatty319.vercel.app",
   },
   {
     id: 7,
@@ -178,7 +191,9 @@ export const projects: Project[] = [
       "/images/logos/mongo.svg",
       "/images/logos/tail.svg",
     ],
-    link: "/ui.aiimg.com",
+    status: "In Progress",
+    githubLink: "https://github.com/moamenzz/Danke-Schon",
+    demoLink: "https://dankeschon.vercel.app",
   },
 ];
 

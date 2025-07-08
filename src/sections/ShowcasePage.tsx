@@ -7,6 +7,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "swiper/swiper-bundle.css";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import TitleHeader from "@/components/TitleHeader";
 
 const ShowcasePage = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -33,9 +39,25 @@ const ShowcasePage = () => {
   return (
     <section id="work" className="app-showcase">
       <div className="w-full">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          My Recent <span className="text-orange-700">Projects</span>
-        </h2>
+        <div className="flex flex-col justify-center">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            My Recent <span className="text-orange-700">Projects</span>
+          </h2>
+
+          <Tooltip>
+            <TooltipTrigger>
+              <TitleHeader sub="exclamation" />
+            </TooltipTrigger>
+            <TooltipContent className="bg-white/10 backdrop-blur-sm border-none">
+              <p>
+                Live Sites (Demos) might take a few minutes to load, depending
+                on whether back-end server is spun down or not. Please be
+                patient 😁 (Or try refreshing)
+              </p>
+            </TooltipContent>
+          </Tooltip>
+          <br />
+        </div>
 
         <div className="showcase">
           <Swiper
