@@ -12,6 +12,7 @@ import TestimonialsSection from "./sections/TestimonialsSection";
 import { ToastContainer } from "react-toastify";
 import * as Sentry from "@sentry/react";
 import ErrorFallback from "./components/ErrorFallback";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
 
       {/* Toaster */}
       <ToastContainer />
+
+      {/* Vercel Analytics */}
+      <Analytics />
     </Sentry.ErrorBoundary>
   );
 }
